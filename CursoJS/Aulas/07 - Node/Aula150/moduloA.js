@@ -1,3 +1,3 @@
 this.ola = 'Fala pessoal'
 exports.bemVindo = 'Bem vindo ao Node'
-module.exports.
+module.exports.ateLogo = 'Ate o proximo exemplo'
