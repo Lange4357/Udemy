@@ -19,5 +19,5 @@ const exec = (ctx, ...middelwares) =>{
 }
 
 const ctx = {}
-exec(ctx, passo1, passo2, passo3)
+exec(ctx, passo3, passo1, passo2)
 console.log(ctx)
