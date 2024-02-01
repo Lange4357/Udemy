@@ -1,0 +1,179 @@
+<h1>Projeto</h1>
+<ul class="tree">
+   <li >
+      <a href class="nivel0">Backend</a>
+      <ul class="nivel1">
+         <li>
+            <a href class="nivel0_1">App</a>
+            <ul class="nivel1_1">
+               <li>Produto.js</li>
+               <li>Usuario.js</li>
+               <li>Venda.js</li>
+            </ul>
+         </li>
+         <li>
+            <a href class="nivel0_2">Config</a>
+            <ul class="nivel1_2">
+               <li>Banco.js</li>
+               <li>Rotas.js</li>
+               <li>Servidor.js</li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   <li>
+      <a href class="nivel2">Frontend</a>
+      <ul class="nivel3">
+         <li>
+            <a href class="nivel2_1">Public</a>
+            <ul class="nivel3_1">
+               <li>app.css</li>
+               <li>app.js</li>
+               <li>index.html</li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
+<script>
+   let func1 = 0, func2 = 0, func3 = 0, func4 = 0, func5 = 0
+
+   /* Função para recolher e abrir a pasta Backend */
+   document.querySelectorAll('.nivel0').forEach(nivel0 =>{      
+      nivel0.onclick = function(e){
+         if(func1 == 0){
+            func1++
+            e.preventDefault()
+            document.querySelectorAll('.nivel1').forEach(nivel1 =>{
+               let classe = document.getElementsByClassName('nivel1')
+               var aux = classe 
+               if(classe.length != 0){       
+                  for(let i = 0; i < classe.length; i++){
+                     classe[i].parentNode.removeChild(classe[i])
+                  }
+               }
+            })
+         }
+         else{
+            document.querySelectorAll('.nivel1').forEach(nivel1 =>{
+               let classe = document.getElementsByClassName('nivel1')
+               if(classe.length == 0){
+                  classe.innerHTML  = aux
+               }
+            })
+         }
+      }
+   })
+
+   /* Função para recolher e abrir a pasta Frontend */
+   document.querySelectorAll('.nivel2').forEach(nivel2 =>{
+      nivel2.onclick = function(e){
+         if(func2 == 0){
+            func2++
+            e.preventDefault()
+            document.querySelectorAll('.nivel3').forEach(nivel3 =>{
+               let classe = document.getElementsByClassName('nivel3')
+               var aux = classe 
+               if(classe.length != 0){       
+                  for(let i = 0; i < classe.length; i++){
+                     classe[i].parentNode.removeChild(classe[i])
+                  }
+               }
+            })
+         }
+         else{
+            document.querySelectorAll('.nivel3').forEach(nivel3 =>{
+               let classe = document.getElementsByClassName('nivel3')
+               if(classe.length == 0){
+                  classe.innerHTML  = aux
+               }
+            })
+         }
+      }
+   })
+   
+   /* Função para recolher e abrir a pasta App */
+   document.querySelectorAll('.nivel0_1').forEach(nivel0_1 =>{      
+      nivel0_1.onclick = function(e){
+         if(func3 == 0){
+            func3++
+            e.preventDefault()
+            document.querySelectorAll('.nivel1_1').forEach(nivel1 =>{
+               let classe = document.getElementsByClassName('nivel1_1')
+               var aux = classe 
+               if(classe.length != 0){       
+                  for(let i = 0; i < classe.length; i++){
+                     classe[i].parentNode.removeChild(classe[i])
+                  }
+               }
+            })
+         }
+         else{
+            document.querySelectorAll('.nivel1_1').forEach(nivel1 =>{
+               let classe = document.getElementsByClassName('nivel1_1')
+               if(classe.length == 0){
+                  classe.innerHTML  = aux
+               }
+            })
+         }
+      }
+   })
+
+   /* Função para recolher e abrir a pasta Config */
+   document.querySelectorAll('.nivel0_2').forEach(nivel0_2 =>{      
+      nivel0_2.onclick = function(e){
+         if(func4 == 0){
+            func4++
+            e.preventDefault()
+            document.querySelectorAll('.nivel1_2').forEach(nivel1 =>{
+               let classe = document.getElementsByClassName('nivel1_2')
+               var aux = classe 
+               if(classe.length != 0){       
+                  for(let i = 0; i < classe.length; i++){
+                     classe[i].parentNode.removeChild(classe[i])
+                  }
+               }
+            })
+         }
+         else{
+            document.querySelectorAll('.nivel1_2').forEach(nivel1 =>{
+               let classe = document.getElementsByClassName('nivel1_2')
+               if(classe.length == 0){
+                  classe.innerHTML  = aux
+               }
+            })
+         }
+      }
+   })
+
+
+   document.querySelectorAll('.nivel2_1').forEach(nivel2_1 =>{      
+      nivel2_1.onclick = function(e){
+         if(func5 == 0){
+            func5++
+            e.preventDefault()
+            document.querySelectorAll('.nivel3_1').forEach(nivel3_1 =>{
+               let classe = document.getElementsByClassName('nivel3_1')
+               var aux = classe 
+               if(classe.length != 0){       
+                  for(let i = 0; i < classe.length; i++){
+                     classe[i].parentNode.removeChild(classe[i])
+                  }
+               }
+            })
+         }
+         else{
+            document.querySelectorAll('.nivel3_1').forEach(nivel3_1 =>{
+               let classe = document.getElementsByClassName('nivel3_1')
+               if(classe.length == 0){
+                  classe.innerHTML  = aux
+               }
+            })
+         }
+      }
+   })
+   
+</script>
