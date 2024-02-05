@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Slider Imagens</title>
+   <style>
+      div{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      img{
+         animation: animacao 2s;
+         animation: animacaoFinal 2s;
+      }
+
+      @keyframes animacao{
+         0%{transform: translate(-100px, 00);}
+         50%{transform: translate(00px, 00)}
+         100%{transform: translate(100px, 00);}
+      }
+   </style>
+   <script>
+      array1 = [
+         'http://files.cod3r.com.br/curso-web/imagem1.jpg',
+         'http://files.cod3r.com.br/curso-web/imagem2.gif', 
+         'http://files.cod3r.com.br/curso-web/imagem3.png', 
+         'http://files.cod3r.com.br/curso-web/avatar.jpg', 
+         'http://files.cod3r.com.br/curso-web/logo-larga.png', 
+         'http://files.cod3r.com.br/curso-web/imagem4.jpg'
+      ]
+
+      let flag = 0
+      function comeco(){
+         if(flag < 6){
+            let img = document.getElementById('img')
+            img.src = array1[flag]
+            img.style.animation = 'none'
+            void img.offsetWidth;
+            img.style.animation = 'animacao 2s'
+            flag++
+         }
+         else{
+            flag = 0
+         }
+      }
+      setInterval(comeco, 2000)
+
+   </script>
+</head>
+<body onload="comeco()">
+   <div>
+      <img alt="Imagens Slider" id="img" width="513" height="342" >
+   </div>
+</body>
+</html>
